@@ -34,7 +34,7 @@ class Customer2 implements Runnable
 public class DrawbackOfMultithreading
 {
 	public static void main(String[] args) {
-		Customer2 c=new Customer2(4);
+		Customer2 c=new Customer2(2);
 		Thread t1=new Thread(c,"Smith");
 		Thread t2=new Thread(c,"Mike");
 		t1.start();

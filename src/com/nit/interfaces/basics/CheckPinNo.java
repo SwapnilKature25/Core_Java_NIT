@@ -1,29 +1,16 @@
 package com.nit.interfaces.basics;
 
 public class CheckPinNo {
-	public void checkPinNo(int pin)
+	
+	public boolean verify(int pinNo)
 	{
-		int count=0;
-		for(int i=1; i<=3; i++)
-		{
-			if(pin != 1111 || pin != 2222 || pin != 3333)
-			{
-				count++;
-			}
-		}
-		
-		if(count <= 3 )
-		{
-			if(pin == 1111 || pin == 2222 || pin == 3333)
-			{
-				
-			}
-			else {
-				System.out.println("Invalid Pin No");
-			}
-		}
-		else {
-			System.out.println("Transactions Blocked");
-		}
+		return switch(pinNo)
+				{
+		case 1111: yield true;
+		case 2222: yield true;
+		case 3333: yield true;
+		default :  yield false;
+				};
 	}
+
 }

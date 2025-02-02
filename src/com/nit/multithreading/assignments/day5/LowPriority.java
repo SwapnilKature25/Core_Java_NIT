@@ -4,7 +4,9 @@ public class LowPriority extends Thread{
 	@Override
 	public void run()
 	{
-		System.out.println(Thread.currentThread().getName());
-		System.out.println(Thread.MIN_PRIORITY);
+		for(int i=1; i<=5; i++)
+		{
+            System.out.println(Thread.currentThread().getName() + " - Priority: " + Thread.currentThread().getPriority());
+		}
 	}
 }

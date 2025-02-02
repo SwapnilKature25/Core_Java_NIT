@@ -5,7 +5,12 @@ public class HighPriority extends Thread {
 	@Override
 	public void run()
 	{
-		System.out.println(Thread.currentThread().getName());
-		System.out.println(Thread.MAX_PRIORITY);
+		for(int i=1; i<=5; i++)
+		{
+//			System.out.print(Thread.currentThread().getName());
+//			System.out.println("\tPriority : "+Thread.currentThread().getPriority());
+            System.out.println(Thread.currentThread().getName() + " - Priority: " + Thread.currentThread().getPriority());
+		}
+		
 	}
 }
