@@ -1,9 +1,9 @@
 package com.nit.collection.day1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-
-class ArrayListDemo {
+ ArrayListDemo {
 	public static void main(String args[]) {
 		ArrayList obj1 = new ArrayList();
 		ArrayList obj2 = new ArrayList();

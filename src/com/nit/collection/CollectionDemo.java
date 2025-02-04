@@ -1,6 +1,7 @@
 package com.nit.collection;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Dictionary;
 import java.util.Vector;
 
@@ -9,5 +10,6 @@ public class CollectionDemo {
 		Dictionary n=null;
 		Vector v=null;
 		Collection c=null;
+		Collections d=null;
 	}
 }

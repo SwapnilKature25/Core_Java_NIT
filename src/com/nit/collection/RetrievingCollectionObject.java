@@ -14,6 +14,8 @@ public class RetrievingCollectionObject {
 		fruits.add("Kiwi");	
 		fruits.add("Grapes");	
 		
+		Enumeration e=null;
+		
 //		There are 9 ways to fetch the Collection Object
 		System.out.println("1. BY USING TOSTRING METHOD : ");
 		System.out.println(fruits.toString());
