@@ -20,7 +20,7 @@ public class Activity {
 
 	@Override
 	public String toString() {
-		return "Activity [name=" + name + ", schedule=" + schedule + "]";
+		return "Activity - " + name + " (" + schedule + ")";
 	}
 
 }

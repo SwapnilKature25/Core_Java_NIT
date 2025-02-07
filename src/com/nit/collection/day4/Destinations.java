@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Destinations {
-	private String name;
-    private ArrayList<Activity> activities;
+    private String name;
+    private List<Activity> activities;
 
     public Destinations(String name) {
         this.name = name;
@@ -20,18 +20,44 @@ public class Destinations {
         return activities;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("Destination: " + name + "\n");
-        for (Activity activity : activities) {
-            sb.append(activity.toString()).append("\n");
-        }
-        return sb.toString();
-    }
+	@Override
+	public String toString() {
+		return "Destinations : " + name + " " + activities.toString();
+	}
+
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder("Destination: " + name + "\n");
+//        for (Activity activity : activities) {
+//            sb.append(activity.toString()).append("\n");
+//        }
+//        return sb.toString();
+//    }
     
-    
-	
+      
+    	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* import java.util.ArrayList;

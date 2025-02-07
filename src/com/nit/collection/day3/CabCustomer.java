@@ -66,8 +66,4 @@ public class CabCustomer {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
-	
-	
-	
 }
