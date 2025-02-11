@@ -12,17 +12,17 @@ public class CabCustomerServiceTester {
 		CabCustomer c3=new CabCustomer(113, "Jane","Ameerpet" , "Secunderabad", 8, "8667569695");
 		CabCustomer c4=new CabCustomer(114, "Mike","Ameerpet" , "Secunderabad", 9, "897569695");
 		
+//		 Adding customers to service
 		services.addCabCustomer(c1);
-		services.printBill(c1);
-		
-//		services.addCabCustomer(c2);
-		services.printBill(c2);
-		services.printBill(c2);
-		
+		services.addCabCustomer(c2);
 		services.addCabCustomer(c3);
-		services.printBill(c3);
-		
 		services.addCabCustomer(c4);
+		
+		
+		// Printing bills
+		services.printBill(c1);
+		services.printBill(c2);
+		services.printBill(c3);
 		services.printBill(c4);
 	}
 }

@@ -23,6 +23,12 @@ public class CabCustomer {
 		return custId;
 	}
 
+	@Override
+	public String toString() {
+		return "CabCustomer [custId=" + custId + ", customerName=" + customerName + ", pickupLocation=" + pickupLocation
+				+ ", dropLocation=" + dropLocation + ", distance=" + distance + ", phone=" + phone + "]";
+	}
+
 	public void setCustId(int custId) {
 		this.custId = custId;
 	}
