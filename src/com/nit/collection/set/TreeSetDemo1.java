@@ -13,6 +13,8 @@ public class TreeSetDemo1
 		t1.add("Pear");
 		t1.add("Banana");
 		t1.add("Apple");	
+		
+		
 		System.out.println("In Ascending order");
 		t1.forEach(i -> System.out.println(i));
 
@@ -26,6 +28,14 @@ public class TreeSetDemo1
         System.out.println("In Descending order");
 //		Iterator<String> itr2 = t2.descendingIterator();  //for descending order
         Iterator<String> desitr = t2.descendingIterator();
-         desitr.forEachRemaining(x -> System.out.println(x));		
+         desitr.forEachRemaining(x -> System.out.println(x));	
+         
+         
+         
+//        AbstractSet methods :
+//         t1.removeAll(t2);
+// 		t1.hashCode();
+// 		t1.equals(t2);
+        
 	}
 }
