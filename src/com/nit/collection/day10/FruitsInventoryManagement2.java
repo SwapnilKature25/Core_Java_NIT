@@ -1,6 +1,7 @@
 package com.nit.collection.day10;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class FruitsInventoryManagement2 {
 	public static void main(String[] args) {
@@ -41,7 +42,6 @@ public class FruitsInventoryManagement2 {
 		
 		
 		
-		
-		
+			
 	}
 }
