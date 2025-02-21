@@ -2,6 +2,7 @@ package com.nit.map.day3;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 public class RetrieveStudentObject {
 	public static void main(String[] args) throws Exception {
@@ -11,11 +12,8 @@ public class RetrieveStudentObject {
 		
 		try(fis; ois)
 		{
-			Student stu=null;
-			while((stu =(Student) ois.readObject()) !=null)
-			{
-				System.out.println(stu);
-			}
+			ArrayList<Student> lst = (ArrayList<Student>)ois.readObject();
+			System.out.println(lst);
 		}
 		catch (Exception e) {
 		

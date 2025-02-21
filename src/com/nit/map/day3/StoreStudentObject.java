@@ -21,8 +21,8 @@ public class StoreStudentObject {
 			for(int i=0; i<n; i++)
 			{
 				st.add(std.getStudentObject());
-				oos.writeObject(st);
 			}
+			oos.writeObject(st);
 			
 			System.out.println("Student Data stored Successfully!!!");						
 			

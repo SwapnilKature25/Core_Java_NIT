@@ -24,15 +24,34 @@ public class ArrayListDuplicates {
 		this.numlst = numlst;
 	}
 	
-	public void getDuplicateList(List num)
+	public void getDuplicateList(int[] num)
 	{
-		for(int i=0; i<numlst.size(); i++)
+		for(int i=0; i<num.length; i++)
 		{
-			if(numlst[i]==numlst[i+1])
+			int count=0;
+			for(int j=1; j<num.length; j++)
 			{
-				
+				if(num[i] == num[j])
+				{
+					count++;
+					if(count >=2)
+					{
+						this.getNumlst().add(num[i]);
+					}
+				}
 			}
 		}
+		System.out.println(getNumlst());
 	}
+	
+	
+	public static void main(String[] args) {
+		int arr[] = {11,23,11,23,45,67,11};
+		ArrayListDuplicates a=new ArrayListDuplicates(arr);
+		
+		
+	}
+	
+	
 	
 }
