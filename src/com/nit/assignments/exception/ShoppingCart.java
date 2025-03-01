@@ -9,14 +9,14 @@ public class ShoppingCart {
 		itemCount=0 ;
 	}
 	
-	public void addToCart(Product p, )
-	{
-		
-	}
-	
-	public double calculateTotal()
-	{
-		
-		
-	}
+//	public void addToCart(Product p, )
+//	{
+//		
+//	}
+//	
+//	public double calculateTotal()
+//	{
+//		
+//		
+//	}
 }
