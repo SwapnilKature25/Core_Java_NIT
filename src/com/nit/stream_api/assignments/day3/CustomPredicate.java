@@ -18,9 +18,10 @@ public class CustomPredicate {
 		List<String> vowel= List.of("Alennn","Virat","Rohit","Igris","USA");
 		
 		vowel.stream()
-		
-		.map(l -> l.length()>5)
-		.forEach(System.out::println);
+		.filter(l -> l.length() > 4)
+		.map(str -> str)
+		.forEach(System.out::println); // Alenn Virat Rohit Igris
+
 		
 		
 	}
