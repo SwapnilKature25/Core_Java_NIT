@@ -3,6 +3,7 @@ package com.nit.stream_api.assignments.day6;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StudentManagement {
@@ -38,6 +39,25 @@ public class StudentManagement {
 			sorted.forEach(System.out::println);
 		}
 	}
+	
+	private static void findTopGpaByDepartment()
+	{
+		if(students.isEmpty())
+		{
+			throw new NoSuchElementException("There are no students data present");
+		}
+		else {
+			students
+			.stream()
+			.collect(Collectors.toMap(Student::getDepartment,x->x, (x,y) -> )
+		}
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	public static void main(String[] args) {
