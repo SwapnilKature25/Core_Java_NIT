@@ -12,6 +12,7 @@ public class FlatMapToIntDemo1 {
 		int []a3 = new int[] {7,8,9};
 		
 		List<int[]> numbers = Arrays.asList(a1,a2,a3);
+//		IntStream flatMapToInt = numbers.stream().flatMapToInt(array -> Arrays.stream(array));		
 		IntStream flatMapToInt = numbers.stream().flatMapToInt(array -> IntStream.of(array));
 		flatMapToInt.forEach(System.out::println);
 	}
