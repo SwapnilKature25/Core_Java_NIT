@@ -55,10 +55,10 @@ public class GenericTest10
 		birds.add(new Bird2());
 		birds.add(new Bird2());
 		
-		GenericTest10 t = new GenericTest10();
-		t.checkAnimals(dogs);
-		t.checkAnimals(cats);
-		t.checkAnimals(birds);
+//		GenericTest10 t = new GenericTest10();
+//		t.checkAnimals(dogs);
+//		t.checkAnimals(cats);
+//		t.checkAnimals(birds);
 
 	}
 }
