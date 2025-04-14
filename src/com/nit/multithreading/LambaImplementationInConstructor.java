@@ -1,6 +1,6 @@
 package com.nit.multithreading;
 
-//case 4 : Lamba Implementation In Constructor : 
+//case 5 : Lambda Implementation In Constructor : 
 
 public class LambaImplementationInConstructor {
 	public static void main(String[] args) {
@@ -8,3 +8,4 @@ public class LambaImplementationInConstructor {
 		new Thread( ()-> System.out.println(Thread.currentThread().getName()),"Child1").start();  // Child1
 	}
 }
+ 

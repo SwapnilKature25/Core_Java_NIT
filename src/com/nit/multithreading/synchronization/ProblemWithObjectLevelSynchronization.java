@@ -4,6 +4,8 @@ class PrintTable
 {
 	    public synchronized void printTable(int n)
 	    {
+	    	String name = Thread.currentThread().getName();
+	    	System.out.println("Current thread : "+name+" started executing");
 	       for(int i=1; i<=10; i++)
 	       {
 	    	   System.out.println(n+" X "+i+" = "+(n*i));
@@ -15,6 +17,7 @@ class PrintTable
 	    	   {	    		   
 	    	   }
 	       }
+	       System.out.println("Current thread : "+name+" completed executing");
 	       System.out.println(".......................");
 	    }	
 }
@@ -27,7 +30,7 @@ public class ProblemWithObjectLevelSynchronization
 		PrintTable pt1 = new PrintTable(); //lock1 [2 , 3]		
 		PrintTable pt2 = new PrintTable(); //lock2 [8 , 9]	
 				
-		Thread t1 = new Thread()  //Anonymous inner class concept
+				Thread t1 = new Thread()  //Anonymous inner class concept
 				{
 			       @Override
 			       public void run()
