@@ -1,6 +1,6 @@
 package com.nit.multithreading.threadPriority;
 
-class Test implements Runnable
+class Tests implements Runnable
 {
 	@Override
 	public void run()
@@ -24,7 +24,7 @@ public class YieldDemo {
 
 	public static void main(String[] args) 
 	{
-		Test t1 = new Test();
+		Tests t1 = new Tests();
 		
 		Thread child1 = new Thread(t1, "Child1");
 		Thread child2 = new Thread(t1, "Child2");
