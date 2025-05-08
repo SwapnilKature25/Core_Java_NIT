@@ -39,7 +39,7 @@ class NewPlatForm10 extends Thread {
 
 	public static void main(String args[]) {
 		Object obj = new Object();
-		obj.start();
+//		obj.start();
 		NewPlatForm10 obj1 = new NewPlatForm10();
 		obj1.start();
 	}

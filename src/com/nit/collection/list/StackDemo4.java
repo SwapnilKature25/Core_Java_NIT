@@ -11,7 +11,8 @@ public class StackDemo4
 			stk.push("Apple");  
 			stk.push("Grapes");  
 			stk.push("Mango"); 			
-			System.out.println("Offset Position is : " + stk.search("Mango")); //1			
+			stk.push("Pineapple"); 			
+			System.out.println("Offset Position is : " + stk.search("Mango")); //2			
 			System.out.println("Offser Position is : " + stk.search("Banana")); //-1
 		    System.out.println("Is stack empty ? "+stk.empty());	//false
 			

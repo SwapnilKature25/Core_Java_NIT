@@ -1,6 +1,4 @@
-p
-
-ackage com.nit.stream_api.assignments.day2;
+package com.nit.stream_api.assignments.day2;
 
 import java.util.Arrays;
 import java.util.OptionalInt;

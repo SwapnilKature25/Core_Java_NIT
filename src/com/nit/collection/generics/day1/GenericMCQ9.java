@@ -17,8 +17,8 @@ class NareshIT6<T extends Float>
 }
 public class GenericMCQ9 {
 	public static void main(String[] args) {
-		NareshIT6<Double> nit1 = new NareshIT6();
-		nit1.set(9999.0);
+		NareshIT6<Float> nit1 = new NareshIT6();
+		nit1.set(9999.0f);
 		System.out.println(nit1.get());
 	}
 }

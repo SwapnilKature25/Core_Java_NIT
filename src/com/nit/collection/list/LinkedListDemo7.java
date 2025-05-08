@@ -22,9 +22,7 @@ public class LinkedListDemo7
         System.out.println("Deque: " + deque);   
 
        
-        String first = deque.remove
-        		
-        		First();
+        String first = deque.removeFirst();
         String last = deque.removeLast();
 
        

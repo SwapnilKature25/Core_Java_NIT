@@ -55,6 +55,7 @@ public class CopyConstructor
 	{
 		Employee e1 = new Employee(111, "Scott");
         Manager m1 = new Manager(e1);
+        System.out.println(e1);
         System.out.println(m1);
 	}
 

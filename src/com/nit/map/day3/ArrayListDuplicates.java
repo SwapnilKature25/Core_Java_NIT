@@ -47,7 +47,7 @@ public class ArrayListDuplicates {
 	
 	public static void main(String[] args) {
 		int arr[] = {11,23,11,23,45,67,11};
-		ArrayListDuplicates a=new ArrayListDuplicates(arr);
+		ArrayListDuplicates a=new ArrayListDuplicates();
 		
 		
 	}

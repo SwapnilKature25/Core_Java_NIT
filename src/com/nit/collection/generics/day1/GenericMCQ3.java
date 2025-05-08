@@ -5,7 +5,7 @@ class Test<R,A>
 	private R r;
 	public void set(A a) 
 	{
-		r = a;
+//		r = a ;
 	}
 	
 	public R get() 

@@ -12,9 +12,9 @@ public class TypeErasure
 	{		
 	}
 	
-	public static void m1(List<String> str)
-	{		
-	}	
+//	public static void m1(List<String> str)
+//	{		
+//	}	
 	
 	
 }

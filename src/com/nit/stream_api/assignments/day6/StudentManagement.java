@@ -47,9 +47,9 @@ public class StudentManagement {
 			throw new NoSuchElementException("There are no students data present");
 		}
 		else {
-			students
-			.stream()
-			.collect(Collectors.toMap(Student::getDepartment,x->x, (x,y) -> )
+//			students
+//			.stream()
+//			.collect(Collectors.toMap(Student::getDepartment,x->x, (x,y) ->  )
 		}
 	}
 	

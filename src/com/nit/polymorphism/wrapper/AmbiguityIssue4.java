@@ -18,6 +18,6 @@ public class AmbiguityIssue4
 	public static void main(String[] args) 
 	{
 		Test5 t = new Test5();
-		t.accept(9,9); 
+//		t.accept(9,9);    // CTE
 	}
 }

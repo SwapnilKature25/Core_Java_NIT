@@ -15,12 +15,12 @@ class Outer11
           public void m1()
 		  {
 			  System.out.println("Inner class value is :"+this.x);
-			  System.out.println("Outer class value is :"+Outer.this.x);
+//			  System.out.println("Outer class value is :"+Outer.this.x);
 		  }
 	  } 
   }
-   Inner i = new Inner();   //can't be accessible outside of the method 
-	  i.m1();
+//   Inner i = new Inner();   //can't be accessible outside of the method 
+//	  i.m1();
 	
 }
 public class MethodLocalInnerClass3 

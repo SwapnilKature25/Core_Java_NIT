@@ -26,6 +26,7 @@ public class ForEachMethodInternalDemo1 {
 		
 		fruits.forEach(cons);
 
+
 	}
 
 }

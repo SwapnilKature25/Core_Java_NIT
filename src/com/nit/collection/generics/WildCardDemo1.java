@@ -21,7 +21,7 @@ public class WildCardDemo1 {
 
 //	 	Upper Bound -  we can't add any element in the Collection.
 		ArrayList<? extends Animal2> list1 = new ArrayList<Horse2>();
-		list1.add(new Horse2()); // error [Not allowed]
+//		list1.add(new Horse2()); // error [Not allowed]
 	}
 
 }

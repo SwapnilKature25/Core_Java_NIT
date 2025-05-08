@@ -19,7 +19,7 @@ public class GenericMCQ12{
 	public static void main(String[] args) {
 		StringTest test = new StringTest();
 		test.nit("Naresh I technologies");
-		test.nit(1.66);
+//		test.nit(1.66);
 	}
 }
 

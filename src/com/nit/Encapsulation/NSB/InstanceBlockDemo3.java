@@ -4,15 +4,12 @@ class Foo
 {
 	Foo()
 	{
-		super();
-		{
-			System.out.println("NSB inside no arg");
-		}
 		System.out.println("No Argument Constructor");
 	}
 	
 	Foo(int x)
 	{
+		this();
 		System.out.println("Parameterized Constructor");
 	}
 	

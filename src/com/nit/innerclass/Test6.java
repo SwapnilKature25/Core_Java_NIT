@@ -49,7 +49,6 @@ public class Test6
 
         laptop.switchOn();
         
-        /*  Turning on HP ENVY
-Booting HP IRIS with Intel chipset  * /
+    
     }
 }

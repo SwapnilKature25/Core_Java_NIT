@@ -7,10 +7,10 @@ class Test
 	public Test()
 	{
 		x = 590;
-		{
-			x = 190;
-			System.out.println("x value is :"+x);
-		}	
+//		{
+//			x = 190;
+//			System.out.println("x value is :"+x);
+//		}	
 		System.out.println("x value is :"+x);
 	}	
 	

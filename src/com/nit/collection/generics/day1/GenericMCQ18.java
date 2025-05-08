@@ -33,7 +33,7 @@ public class GenericMCQ18
 		Basket<Fruit> b = new Basket<>();
 		b.setElement(new Apple());
 
-		Apple x = b.getElement();	
+		Apple x = (Apple) b.getElement();	
 //		Apple x =  (Apple) b.getElement();	
 		System.out.println(x);
       		

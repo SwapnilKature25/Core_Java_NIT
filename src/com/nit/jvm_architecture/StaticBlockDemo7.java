@@ -8,7 +8,7 @@ class StaticBlockDemo7
 	static 
 	{
       System.out.println("Static Block");
-	  return; 
+//	  return;  error 
 	}
 
 	public static void main(String[] args) 

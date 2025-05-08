@@ -19,3 +19,4 @@ public class InnerObjectOneLine
            MyOuter2.MyInner m = new MyOuter2().new MyInner();
 			m.seeOuter();
       } 
+}
