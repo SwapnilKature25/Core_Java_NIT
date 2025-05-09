@@ -21,6 +21,7 @@ public class SystemHashCode {
 		
 		System.out.println(System.identityHashCode(f1));
 		System.out.println(System.identityHashCode(f2));
+		System.out.println(System.identityHashCode(Foo.class));
 		
 	}
 

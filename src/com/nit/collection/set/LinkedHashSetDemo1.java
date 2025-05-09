@@ -17,12 +17,12 @@ public class LinkedHashSetDemo1
 
         System.out.println("LinkedHashSet elements: " + linkedHashSet);
 
-        System.out.println("LinkedHashSet size: " + linkedHashSet.size());
+        System.out.println("LinkedHashSet size: " + linkedHashSet.size()); //5
 
         int elementToCheck = 15;
-        if (linkedHashSet.contains(elementToCheck)) 
+        if (linkedHashSet.contains(elementToCheck))  /// true
 		{
-            System.out.println(elementToCheck + " is present in the LinkedHashSet.");
+            System.out.println(elementToCheck + " is present in the LinkedHashSet.");  
         } 
 		else 
 		{
@@ -30,7 +30,7 @@ public class LinkedHashSetDemo1
         }
 
         int elementToRemove = 10;
-        linkedHashSet.remove(elementToRemove);
+        linkedHashSet.remove(elementToRemove);  // removed
         System.out.println("After removing " + elementToRemove + ", LinkedHashSet elements: " + linkedHashSet);
 
         linkedHashSet.clear(); 

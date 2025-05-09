@@ -24,5 +24,8 @@ public class HashTableDemo1
 		 {  
 			 System.out.println(m.getKey()+" = "+m.getValue());  
 		} 
+	  
+	  
+	  map.forEach((k,v) -> System.out.println(k+" "+v));
     }  
 }  

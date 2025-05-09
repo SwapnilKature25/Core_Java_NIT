@@ -1,6 +1,7 @@
 package com.nit.collection.set;
 
 import java.util.Iterator;
+import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class TreeSetDemo1
@@ -24,8 +25,12 @@ public class TreeSetDemo1
 		t2.add("Pear");
 		t2.add("Banana");
 		t2.add("Apple");
-
-        System.out.println("In Descending order");
+		System.out.println("");
+		System.out.println("In Descending order using descendingset");
+		NavigableSet<String> descendingSet = t2.descendingSet();
+		descendingSet.forEach(System.out::println);
+		System.out.println("");
+        System.out.println("In Descending order using descendingIterator");
 //		Iterator<String> itr2 = t2.descendingIterator();  //for descending order
         Iterator<String> desitr = t2.descendingIterator();
          desitr.forEachRemaining(x -> System.out.println(x));	

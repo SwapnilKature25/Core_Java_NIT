@@ -25,7 +25,8 @@ public class TreeSetDemo7
     	   System.out.println(st);
        }
        
-       
+       System.out.println();
+       	
        TreeSet<Student> ts2 = new TreeSet<>((s1,s2) -> Double.compare(s1.fees(), s2.fees()));	
        ts2.add(new Student(333, 25000D));
        ts2.add(new Student(222, 2200D));

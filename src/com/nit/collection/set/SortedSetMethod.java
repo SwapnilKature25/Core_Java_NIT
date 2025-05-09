@@ -6,7 +6,6 @@ public class SortedSetMethod
 {
        public static void main(String[] args) 
        {
-    	   TreeMap s=null;
             TreeSet<Integer> times = new TreeSet<>();
             times.add(1205);
             times.add(1505);
@@ -16,12 +15,12 @@ public class SortedSetMethod
             times.add(2010);
             times.add(2100);
             
-            System.out.println(times);    // [1205, 1505, 1545, 1600, 1830, 2010, 2100]
+            System.out.println(times);    // [	1205, 1505, 1545, 1600, 1830, 2010, 2100]
             SortedSet<Integer> sub = new TreeSet<>();
             
 			sub =  times.subSet(1545,2100); 
             System.out.println("Using subSet() :-"+sub);//[1545, 1600,1830,2010]
-            System.out.println(sub.first());
+            System.out.println(sub.first()); 
             System.out.println(sub.last());   
 			
 		    sub = times.headSet(1545); 

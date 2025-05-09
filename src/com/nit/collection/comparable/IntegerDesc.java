@@ -13,8 +13,7 @@ public class IntegerDesc {
 		al.add(100);
 		al.add(200);
 
-		Collections.sort(al,(i1,i2)-> i2.compareTo(i1));
-		
+		Collections.sort(al, (p1,p2)-> p2.compareTo(p1) );
 		System.out.println(al);
 		
 

@@ -10,6 +10,7 @@ public class ArrayListDemo10 {
 		ArrayList<String> list = new ArrayList<>(100); 
         list.add("Java");
         list.add("World");  
+        list.add("World");  
         
         
         

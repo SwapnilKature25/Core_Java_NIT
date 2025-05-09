@@ -40,8 +40,7 @@ public static void main(String[] args)
 					{
                     System.out.print("Enter the element to delete: ");
                     int elemenetToDelete = scanner.nextInt();
-                    boolean remove = linkedList.remove(Integer.valueOf(elemenetToDelete));
-      
+                    boolean remove = linkedList.remove(Integer.valueOf(elemenetToDelete));  // remove(Object o) - uses Integer.valueOf(elementToDelete) to ensure that the value is removed, not the element at a specific index.       
                     
                      if(remove)
                      {

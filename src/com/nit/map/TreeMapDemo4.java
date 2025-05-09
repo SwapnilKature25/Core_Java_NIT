@@ -14,6 +14,7 @@ public class TreeMapDemo4
      map.put("key1", "value1");
 
      System.out.println(map); //
+     
 
      SortedMap x = (SortedMap) map;
      System.out.println("First key is :"+x.firstKey());
