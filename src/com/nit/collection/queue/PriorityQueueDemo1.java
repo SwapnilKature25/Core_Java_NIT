@@ -10,7 +10,7 @@ public class PriorityQueueDemo1
             pq.add(2);
             pq.add(4);          
             pq.add(6);          
-//			pq.offer(6);
+			pq.offer(6);
            System.out.println(pq);  // [2, 6, 4, 11]
 	  }
 }

@@ -27,6 +27,7 @@ class UnknownClass2
 		int i = ((Integer)it.next()); 
 		total += i; 
 		} 
+		list.forEach(System.out::println);
 		return total; 
 	} 
 } 
