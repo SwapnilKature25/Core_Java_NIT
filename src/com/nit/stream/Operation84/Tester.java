@@ -1,14 +1,13 @@
 package com.nit.stream.Operation84;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 
 public class Tester {
 	private static final String RED = "\033[1;31m"; // RED
@@ -360,8 +359,91 @@ public class Tester {
 		
 		Collections.reverse(collect2);
 		System.out.println(collect2);
+		System.out.println();
 			
+
+
+//		28. Find the Highest Salary Among Female Employees:
+//			   - Find the highest salary among female employees.
+		System.out.println(RED+"******Find the highest salary among female employees."+RESET);
+		// 1
+		list.stream()
+			.filter(emp -> emp.getGender().equalsIgnoreCase("female"))
+			.sorted(Comparator.comparing(Employee::getSalary).reversed())
+			.limit(3)
+			.forEach(System.out::println);
+			
+		System.out.println();
+		// 2
+		Employee employee3 = list.stream()
+				.filter(k->k.getGender().equals("Female"))
+				.collect(Collectors.maxBy( (s1,s2) -> (int)(s1.getSalary() - s2.getSalary()))).get();
+		System.out.println(employee3);
 		
+		System.out.println();
+		
+
+//		29. Group Employees by Age and Gender:
+//			   - Group employees by both age and gender and return a multi-level map.
+		System.out.println(RED+"********Group employees by both age and gender and return a multi-level map.*****"+RESET);
+		Map<String, Map<Integer, List<Employee>>> collect3 = list.stream()
+			.collect(Collectors.groupingBy(Employee::getGender,Collectors.groupingBy(Employee::getAge)));
+		
+		collect3.forEach( (key,value) ->
+		{
+			value.forEach( (k,v) -> System.out.println(k+" - "+v));
+			System.out.println(key+" - "+value);
+		});
+		
+		System.out.println();
+
+		
+
+//		30. Find the Sum of Salaries for Employees with Names Containing "Smith":
+//			   - Calculate the sum of salaries for employees whose names contain the substring "Smith."
+		System.out.println(RED+"******* Calculate the sum of salaries for employees whose names contain the substring Smith***"+RESET);
+		// 1
+		Double collect4 = list.stream()
+			.filter(names -> names.getName().equalsIgnoreCase("Smith"))
+			.collect(Collectors.summingDouble(Employee::getSalary));
+		System.out.println(collect4);
+	
+		// 2  	
+		double sum2 = list.stream()
+			.filter(k -> k.getName().contains("Employee"))
+			.mapToDouble(s -> s.getSalary()).sum();
+		System.out.println(sum2);
+		
+		System.out.println();
+		
+//		31. Find the Names of Employees Aged 30-40 with Salaries Between $50,000 and $60,000:
+//		   - Retrieve the names of employees aged 30-40 with salaries between $50,000 and $60,000.
+		System.out.println(RED+"******Retrieve the names of employees aged 30-40 with salaries between $50,000 and $60,000.*******"+RESET);
+		list.stream()
+			.filter(age -> (age.getAge() >=30 && age.getAge()<=40) && (age.getSalary()>=50000 && age.getSalary()<=60000))
+			.forEach(System.out::println);
+		
+		System.out.println();
+		
+		
+
+//		32. Calculate the Total Number of Employees:
+//			   - Determine the total count of employees.
+		System.out.println(RED+"******** Determine the total count of employees.*******"+RESET);
+		System.out.println("Total Count of employess : "+list.stream().count());
+		
+		System.out.println();
+
+
+//		33. Find the Most Common Age Among Employees:
+//			   - Determine the age that is most common among the employees.
+		System.out.println(RED+"******Determine the age that is most common among the employees.***"+RESET);
+//		list.stream()
+//			.filter( (s1,s2)-> s1.g)
+		
+		
+		System.out.println();
+		System.out.println();
 		System.out.println();
 	}
 }
