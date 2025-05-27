@@ -19,6 +19,7 @@ public class EmployeeAdder {
 		Employee employee8 = new Employee("Employee 8", 32, 57000.0, "Female");
 		Employee employee9 = new Employee("Employee 9", 35, 58000.0, "Male");
 		Employee employee10 = new Employee("EMPLOYEEeeseeee 10", 35, 59000.0, "Female");
+		Employee employee11 = new Employee("EMPLOYEEeeseeee 10", 34, 49000.0, "male");
 
 		list.add(employee1);
 		list.add(employee2);

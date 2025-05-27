@@ -2,9 +2,11 @@ package com.nit.stream.Operation84;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -438,11 +440,167 @@ public class Tester {
 //		33. Find the Most Common Age Among Employees:
 //			   - Determine the age that is most common among the employees.
 		System.out.println(RED+"******Determine the age that is most common among the employees.***"+RESET);
-//		list.stream()
-//			.filter( (s1,s2)-> s1.g)
+		Integer orElseThrow5 = list.stream()
+		.collect(Collectors.groupingBy(Employee::getAge,Collectors.counting())) // grouping ages and count
+		.entrySet() // converting to set
+		.stream()
+		.max(Map.Entry.comparingByValue()) // finding max value in map
+		.map(Map.Entry::getKey) // getting key of max value
+		.orElseThrow(); // getting the key
+		
+		System.out.println(orElseThrow5);
+		System.out.println();
+		
+
+//		34. Find the Median Salary:
+//			   - Calculate the median salary of all employees.
+
+		System.out.println(RED+"********Calculate the median salary of all employees.******"+RESET);
+		List<Employee> list2 = list.stream()
+				.sorted(Comparator.comparingDouble(Employee::getSalary)).toList();
+				int siz = list2.size();
+				if(siz%2==0)
+				{
+					double s = list2.get(siz/2-1).getSalary();
+					double s1 = list2.get(siz/2).getSalary();
+					System.out.println((s+s1)/2.0);
+				}
+				else {
+					System.out.println(list2.get(siz/2).getSalary());
+				}
+		
+		System.out.println();
+		List<Employee> sorted = list.stream()
+			    .sorted(Comparator.comparingDouble(Employee::getSalary))
+			    .toList();
+
+			int size = sorted.size();
+			if (size == 0) {
+			    System.out.println("No employees to calculate median salary.");
+			} else {
+			    double median = (size % 2 == 0) 
+			        ? (sorted.get(size / 2 - 1).getSalary() + sorted.get(size / 2).getSalary()) / 2.0
+			        : sorted.get(size / 2).getSalary();
+			    System.out.println("Median Salary: " + median);
+			}
+		
+		System.out.println();
+
+
+//		35. Group Employees by Age and Count:
+//		   - Group employees by age and count the number of employees in each age group.
+		System.out.println(RED+"*******Group employees by age and count******"+RESET);
+		
+		Map<Integer, Long> collect5 = list.stream()
+			.collect(Collectors.groupingBy(Employee::getAge,Collectors.counting()));
+		collect5.forEach( (k,v) -> System.out.println("Age : "+k+" - "+v));
+		
+		System.out.println();
+		
+		
+
+
+//		36. Find the Employee with the Longest Name:
+//			   - Find the employee with the longest name.
+		System.out.println(RED+"********Find the employee with the longest name.****"+RESET);
+	     Employee employee4 = list.stream()
+			.max( (s1,s2) -> s1.getName().length() - s2.getName().length()).get();
+	     System.out.println(employee4);
+		
+		System.out.println();
+		list.stream()
+			.map( str -> str.getName().length())
+			.sorted(Comparator.reverseOrder())
+			.limit(1)
+			.forEach(System.out::println);
+			
+		
+		System.out.println();
+		
+			
+//		37. Calculate the Sum of Salaries for Each Age:
+//			   - Calculate the sum of salaries for each distinct age in a map.
+		System.out.println(RED+"***********Calculate the sum of salaries for each distinct age in a map*******"+RESET);
+		Map<Integer, DoubleSummaryStatistics> collect6 = list.stream()
+			.distinct()
+			.collect(Collectors.groupingBy((Employee::getAge), Collectors.summarizingDouble(Employee::getSalary)));
+		
+		collect6.forEach((k,v) -> System.out.println(k+" - "+v));
 		
 		
 		System.out.println();
+
+
+//		38. Sort Employees by Age, Then by Salary:
+//			   - Sort employees first by age in ascending order, and then by salary in descending order.
+		System.out.println(RED+"**********Sort employees first by age in ascending order, and then by salary in descending order*******"+RESET);
+		list.stream()
+			.sorted(Comparator.comparingInt(Employee::getAge)
+			.thenComparing(Comparator.comparingDouble(Employee::getSalary)).reversed())
+			.forEach( System.out::println);
+		
+		
+		System.out.println();
+		
+//		39. Find Employees Whose Names Contain More Than One Word:
+//		   - Retrieve employees whose names consist of more than one word.
+		System.out.println(RED+"***********Retrieve employees whose names consist of more than one word.*****"+RESET);
+		list.stream()
+			.filter( str -> str.getName().trim().contains(" "))
+			.forEach(System.out::println);
+		
+		
+		System.out.println();
+		
+
+//		40. Find the Two Highest Paid Female Employees:
+//			   - Find and display the names of the two highest-paid female employees.
+		System.out.println(RED+"**********Find and display the names of the two highest-paid female employees.*****"+RESET);
+		list.stream()
+			.filter(str -> str.getGender().equalsIgnoreCase("female"))
+			.sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+			.limit(2)
+			.forEach(System.out::println);
+		
+		System.out.println();
+		
+		
+
+//		41. Find the Employee with the Highest Salary in Each Gender:
+//			   - Find the employee with the highest salary for each gender (male and female).
+		System.out.println(RED+"******Find the employee with the highest salary for each gender (male and female).*****"+RESET);
+		list.stream()
+		.collect(Collectors.toMap(Employee::getGender, k->k,(e1, e2) -> e1.getSalary()>=e2.getSalary()?e1:e2))
+		.forEach((key,value)->System.out.println(key+"-"+value));
+		
+		System.out.println();
+		
+		Map<String, Optional<Employee>> highestPaidByGender = list.stream()
+			    .collect(Collectors.groupingBy(
+			        emp -> emp.getGender().toLowerCase(), // group by gender 
+			        Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))
+			    ));
+		highestPaidByGender.forEach((key,value)->System.out.println(key+"-"+value));
+		
+		
+		System.out.println();
+		
+
+//		42. Retrieve Employees with Unique Names:
+//			   - Find employees with unique names (no duplicate names in the list).
+		System.out.println(RED+"*******Find employees with unique names (no duplicate names in the list).****"+RESET);
+		list.stream().filter(k->set2.add(k.getName()))
+		.forEach(System.out::println);
+		set2.clear();
+		System.out.println();
+		
+		list.stream()
+	    .filter(emp -> list.stream().filter(e -> e.getName().equals(emp.getName())).count() == 1)
+	    .forEach(System.out::println);
+
+		System.out.println();
+		
+		
 		System.out.println();
 		System.out.println();
 	}

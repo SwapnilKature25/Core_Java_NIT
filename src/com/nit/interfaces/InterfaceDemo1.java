@@ -12,7 +12,7 @@ non-sealed class Cars implements Moveable
 	@Override
 	public void move() 
 	{
-		//SPEED = 120;   [Invalid]
+		//SPEED = 120; z  [Invalid]
 		System.out.println("Car is Moving with :"+SPEED+ "KM/Hr");
 		
 	}	
