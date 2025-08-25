@@ -16,7 +16,7 @@ public class StackDemo1
 				s.push(33);
 				s.push(49);
 				System.out.println("After insertion elements are :"+s); 
-             
+				System.out.println("Offset position(top-bottom index value) "+s.search(49));
 				System.out.println("Element at Peek : "+s.peek());
                 System.out.println("Fetching the elements using pop method");
                 System.out.println(s.pop());

@@ -17,7 +17,7 @@ public class VectorDemo5
 		listOfCity.add("Ahmadabad");
 		listOfCity.add("Vanaras");
 		
-			
+		
 		Collections.sort(listOfCity);
 		listOfCity.forEach(System.out::println);
 		
@@ -50,7 +50,8 @@ public class VectorDemo5
 		
 		System.out.println("Descending Order...");
 		//sort(List list, Comparator<T> comp);
-		Collections.sort(listOfNumbers, Collections.reverseOrder());
+		Collections.sort(listOfNumbers,Collections.reverseOrder());
+		Collections.sort(listOfNumbers, (s1,s2)->Integer.compare(s2, s1));
 		System.out.println(listOfNumbers);
 		
 		

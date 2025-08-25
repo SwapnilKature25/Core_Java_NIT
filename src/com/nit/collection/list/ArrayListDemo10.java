@@ -12,8 +12,7 @@ public class ArrayListDemo10 {
         list.add("World");  
         list.add("World");  
         
-        
-        
+
         //public void trimToSize()
        list.trimToSize();
         System.out.println("Trimmed List Size: " + list.size()); 
@@ -36,6 +35,10 @@ public class ArrayListDemo10 {
         	listOfNumber.add(i);
         }
         System.out.println("List size: " + listOfNumber.size());  // 51
+        
+        
+        
+      
 	}
 
 }

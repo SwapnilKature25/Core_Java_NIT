@@ -11,11 +11,13 @@ public class StackDemo4
 			stk.push("Apple");  
 			stk.push("Grapes");  
 			stk.push("Mango"); 			
-			stk.push("Pineapple"); 			
+			stk.push("Pineapple"); 		
+			System.out.println(stk);
+			
 			System.out.println("Offset Position is : " + stk.search("Mango")); //2			
 			System.out.println("Offser Position is : " + stk.search("Banana")); //-1
 		    System.out.println("Is stack empty ? "+stk.empty());	//false
 			
-			System.out.println("Index Position is : " + stk.indexOf("Mango")); //2
+			System.out.println("Index Position is : " + stk.indexOf("Pineapple")); //2
 		}  
 }  

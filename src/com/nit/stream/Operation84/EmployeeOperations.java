@@ -391,8 +391,8 @@ public class EmployeeOperations {
 //		28. Find the Highest Salary Among Female Employees:
 //			   - Find the highest salary among female employees.
 		System.out.println(RED+"******Find the highest salary among female employees."+RESET);
-		list.stream()
-			.sorted((s1,s2)-> s2.getGender().equalsIgnoreCase("Female") )
+		list.stream();
+//			.sorted((s1,s2)-> s2.getGender().equalsIgnoreCase("Female") );
 		
 		
 		System.out.println();

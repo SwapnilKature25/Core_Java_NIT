@@ -18,7 +18,7 @@ public class ArrayListDemo1
 		listOfCustomer.add(new Customer(444, "Martin", 1500D));
 		listOfCustomer.add(new Customer(555, "John", 1300D));
 		
-		
+//		System.out.println(listOfCustomer);
 		listOfCustomer.forEach(System.out::println);
 		
 		

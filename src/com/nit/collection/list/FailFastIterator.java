@@ -30,7 +30,7 @@ class Concurrent extends Thread
 			e.printStackTrace();
 		}
 //		If we dont add new city then it will not throw concurrentModificationException 
-		cities.add("Ameerpet");
+//		cities.add("Ameerpet");
 		
 	}
 }

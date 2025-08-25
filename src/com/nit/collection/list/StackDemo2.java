@@ -27,6 +27,6 @@ public class StackDemo2
           Stack<Double> st4 = new Stack<>();
           st4.add(10.5);
           st4.add(20.5);               
-          st4.forEach(x -> System.out.println(x));          
+          st4.forEach(System.out::println);          
     }  
 }

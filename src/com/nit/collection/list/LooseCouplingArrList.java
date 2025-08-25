@@ -14,10 +14,11 @@ public class LooseCouplingArrList {
 		v1.add(29);
 		v1.add(59);
 		v1.add(24);
+		System.out.println(v1);
 		
 		ArrayList<Integer> list = new ArrayList<>(v1);		
+		list.add(43);
 		System.out.println(list);
-		
 		
 	}
 

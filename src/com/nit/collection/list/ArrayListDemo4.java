@@ -14,6 +14,7 @@ public class ArrayListDemo4
 	ArrayList<String> listOfIceCream = new ArrayList<>();
 	listOfIceCream.add("Vanila");
 	listOfIceCream.add("Strwbarry");
+	listOfIceCream.add("Choclate");
 	listOfIceCream.add("Butter Scotch");
 	
 	//Serialization 
@@ -30,7 +31,7 @@ public class ArrayListDemo4
 		e.printStackTrace();
 	}
 	
-	//De-Serializationprogr
+	//De-Serialization
 	
 	var fin = new FileInputStream("C:\\file\\IceCreamFlavors.txt");
 	var ois = new ObjectInputStream(fin);

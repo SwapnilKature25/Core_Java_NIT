@@ -34,9 +34,9 @@ public class ArrayListDemo2
 		  
 		  al3.retainAll(al4);  
 
-        al3.forEach(x -> System.out.println(x));
+		  al3.forEach(x -> System.out.println(x));
         
-        
+        System.out.println("=================");
 //        Copy constructor
         ArrayList<String> al5= (ArrayList<String>) al1.clone();
         System.out.println(al5);
